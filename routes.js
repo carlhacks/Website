@@ -24,6 +24,14 @@ var saveUser = function (model, data, callback) {
     dietary.push(key);
   };
   data.dietary = dietary;
+
+  var urls = data.urls.split('\n');
+
+  for (var i = 0; i < urls.length; i++) {
+    urls[i] = urls[i].trim();
+    urls[i] = urls[i].replace(',', '');
+  }
+
   var handle_user = function (error, user) {
     for (key in USER_KEYS) {
       if (data.hasOwnProperty(key)) {

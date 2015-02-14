@@ -9,7 +9,7 @@ mixin userform(user)
     .form-group
       label.control-label.col-sm-4(for='user-email') Email*
       .col-sm-8
-        input.form-control(id='user-email', type='text',name='user[email]',required, value=(('email' in user) ? user.email : ''))
+        input.form-control(id='user-email', type='email',name='user[email]',required, value=(('email' in user) ? user.email : ''))
     .form-group
       label.control-label.col-sm-4(for='user-school') School*
       .col-sm-8
@@ -21,7 +21,7 @@ mixin userform(user)
     .form-group
       label.control-label.col-sm-4(for='user-urls') Online Profiles (GitHub, LinkedIn, etc.)
       .col-sm-8
-        textarea.form-control(id='user-urls',name='user[urls]', value=(('urls' in user) ? user.classYear : undefined))
+        textarea.form-control(id='user-urls',name='user[urls]', placeholder='urls, one per line' value=(('urls' in user) ? user.classYear : undefined))
     .form-group
       label.control-label.col-sm-4(for='user-shirt-size') Shirt Size*
       .col-sm-8
