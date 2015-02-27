@@ -26,6 +26,10 @@ module.exports.setup = function (app, User) {
     res.render('code', {title: 'CarlHacks - Code of Conduct'});
   });
 
+  app.get('/terms', function(req, res){
+    res.render('terms', {title: 'CarlHacks - Terms and Liability Waiver'});
+  });
+
   app.get('/apply', function(req, res){
     res.render('form', {
       title: 'CarlHacks - Apply',

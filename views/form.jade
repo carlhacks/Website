@@ -110,7 +110,7 @@ block content
             span Please do <em>not</em> take photos of me.
             span.desc
               | We will be taking photographs to document this event. If you'd prefer that photographers avoid
-              | taking photos of you, check this box.
+              | taking close-up photos of you, check this box.
           label
             input(id='user-ids-woman', type='checkbox', name='user[idsWoman]', checked=(('idsWoman' in user) && user.idsWoman ? 'checked' : undefined))
             span I identify as a woman and would like priority registration.
@@ -148,6 +148,6 @@ block content
         .checklist
           label
             input(id='user-agree', type='checkbox', name='user[agree]', checked=(('agree' in user) && user.agree ? 'checked' : undefined))
-            | I agree to the <a href="/code-of-conduct">Code of Conduct</a>
+            | I have read and agree to the <a href="/terms">Liability Waiver</a> and the <a href="/code-of-conduct">Code of Conduct</a>
             span.short-desc required
       input.register(type='submit', value=subVerb, class='btn btn-primary')
